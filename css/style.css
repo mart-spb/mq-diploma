@@ -637,15 +637,15 @@
   }
   
   .social-link-dribbble {
-    background-image: url("../svg/001-dribbble.svg");
+    background-image: url("/svg/001-dribbble.svg");
   }
   
   .social-link-pinterest {
-    background-image: url("../svg/002-pinterest.svg");
+    background-image: url("/svg/002-pinterest.svg");
   }
   
   .social-link-tumblr {
-    background-image: url("../svg/003-tumblr.svg");
+    background-image: url("/svg/003-tumblr.svg");
   }
   
   .copyright {
