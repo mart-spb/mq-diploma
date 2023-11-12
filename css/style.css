@@ -144,6 +144,7 @@
     display: flex;
     padding-top: 30px;
     outline: 1px solid black;
+    gap: 3px;
   }
   
   .trend {
@@ -280,6 +281,8 @@
   }
   
   .article-picture {
+    max-width: 380px;
+    width: 100%;
     margin-right: 30px;
   }
   
@@ -338,7 +341,7 @@
   /* Боковая секция */
   
   .aside {
-    width: 272px;
+    min-width: 272px;
     margin-left: 10%;
   }
   
@@ -402,10 +405,11 @@
   .search {
     display: flex;
   }
-  
+
   .search-field {
     display: block;
     padding: 0 20px 0 20px;
+    margin: 0;
     border: none;
     width: 220px;
     height: 50px;
@@ -422,6 +426,7 @@
     border: none;
     outline: none;
     padding: 0;
+    margin: 0;
   
     background-image: url("../svg/search.svg");
     background-color: #b59f5b;
@@ -525,6 +530,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 0 0 0;
+    gap: 3%;
   }
   
   .product-item {
@@ -533,7 +539,7 @@
     flex-direction: column;
     box-sizing: border-box;
     min-width: 330px;
-    width: 30%;
+    width: calc(33% - 3%);
   }
   
   .img-box {
@@ -541,22 +547,24 @@
     justify-content: center;
     padding: 0 15px;
   }
-  
+
+  .product-img {
+    min-width: 300px;
+    width: 100%;
+  }
+
   .product-wrp {
     margin: -37px 0 0 0;
-    padding-top: 45px;
+    padding: 45px 20px 20px 20px;
     border: 3px solid #b59f5b;
     flex-grow: 1;
   }
   
   .product-text {
     line-height: 1.5;
-    padding-left: 20px;
+    padding-bottom: 20px;
   }
   
-  .product-item:nth-child(2) {
-    margin: 0 5%;
-  }
   
   .product-name {
     font-size: 20px;
@@ -576,7 +584,6 @@
     outline: 1px solid black;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
   }
   
   .old-price {
@@ -637,15 +644,15 @@
   }
   
   .social-link-dribbble {
-    background-image: url("./svg/001-dribbble.svg");
+    background-image: url("../svg/001-dribbble.svg");
   }
   
   .social-link-pinterest {
-    background-image: url("./svg/002-pinterest.svg");
+    background-image: url("../svg/002-pinterest.svg");
   }
   
   .social-link-tumblr {
-    background-image: url("./svg/003-tumblr.svg");
+    background-image: url("../svg/003-tumblr.svg");
   }
   
   .copyright {
@@ -664,45 +671,47 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
     background-color: rgba(0, 0, 0, 0.5);
   }
   
   .fidback-section {
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
-    width: 390px;
-    height: 590px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    max-width: 390px;
   
     background-color: #ffffff;
   
     padding: 45px 32px 50px 30px;
   }
   
-  .fidback-section::before {
-    content: " ";
+  .fidback-section-close {
     width: 20px;
     height: 20px;
-    top: -25px;
-    right: 0;
+    
   
     position: absolute;
+    top: -25px;
+    right: 0;
   
     background-image: url(../svg/form-x.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .fidback-section-close:hover {
+    cursor: pointer;
+  }
   
   .form-name {
     font-size: 20px;
     text-transform: uppercase;
-    margin: 0 auto;
+    text-align: center;
   }
   
   .form-name::after {
@@ -979,32 +988,86 @@
     }
   
     .our-products {
-      padding: 0 5%;
+      padding: 0 6%;
     }
   
     .product-container {
       box-sizing: border-box;
       padding-top: 30px;
+      gap: 3%;
     }
   
     .product-item {
-      width: calc(50% - 70px);
-    }
-  
-    .product-item:nth-child(n + 3) {
-      margin-top: 30px;
-    }
-  
-    .product-item:nth-child(2) {
-      margin: 0 0;
+      min-width: 322px;
+      width: calc(50% - 3%);
     }
 
     .product-img {
-        width: 100%;
+      min-width: 292px;
+      width: 100%;
     }
 
     .page-footer {
-        padding: 6% 5% 5% 5%;
+        padding: 6% 6% 5% 6%;
+    }
+
+  }
+
+
+  @media (max-width: 640px) {
+
+    .page-header {
+      background-image: url(../images/baners/banner-mobile.jpg);
+      padding: 7% 4% 60% 4%;
+    }
+
+    .navigation-menu {
+      justify-content: center;
+    }
+
+    .navigation-logo {
+      width: 270px;
+      padding: 200px 10px 30px 25px;
+    }
+
+    .main-title-box {
+      padding: 0;
+    }
+
+    .main-title {
+      font-size: 26px;
+    }
+
+    .trend {
+      width: 100%;
+    }
+
+    .main { 
+      flex-wrap: wrap;
+      padding: 0 4%;
+      
+    }
+
+    .aside {
+      min-width: 272px;
+      margin-left: 0;
+    }
+
+    .search-field{
+      width: 100%;
+    }
+
+    .our-products {
+      padding: 0 4%;
+    }
+
+    .product-item {
+      min-width: 285px;
+      width: 100%;
+    }
+
+    .product-img {
+      max-width: 100%;
     }
 
   }

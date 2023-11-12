@@ -14,7 +14,7 @@
         <a class="navigation-logo" href="#0">
           <img src="./svg/noemi-logo.svg" alt="логотип">
         </a>
-        <button class="menu__button js-menu__button">
+        <button class="menu__button">
           <span class="menu__button-label">открыть меню</span>
         </button>
         <ul class="navigation-list">
@@ -280,15 +280,15 @@
       </section>
   
       <div class="aside-section">
-        <form class="search">
-          <label class="search-group">
-            <span class="visually-hidden">Поле поиска</span>
-            <input class="search-field" type="search" placeholder="Найти..." required>
-          </label>
-          <button class="search-btn">
-            <span class="visually-hidden">Кнопка поиска</span>
-          </button>
-        </form>
+          <form class="search">
+            <label class="search-group">
+              <span class="visually-hidden">Поле поиска</span>
+              <input class="search-field" type="search" placeholder="Найти..." required>
+            </label>
+            <button class="search-btn">
+              <span class="visually-hidden">Кнопка поиска</span>
+            </button>
+          </form>
       </div>
   
       <section class="aside-section">
@@ -364,7 +364,12 @@
     <div class="product-container">
       <article class="product-item">
         <div class="img-box">
-          <img class="product-img" src="./images/shopdesk/shop-item-desk1.jpg" alt="Подушка с модным принтом">
+          <picture>
+            <source srcset="./images/shoptablet/shop-item-tablet1.jpg" media="(max-width: 1199px)">
+            <source srcset="./images/shopmobile/shop-item-mobile1.jpg" media="(max-width: 640px)">
+            <img class="product-img" 
+            src="./images/shopdesk/shop-item-desk1.jpg" alt="Подушка с модным принтом">
+          </picture>
         </div>
         <div class="product-wrp">
           <div class="product-text">
@@ -388,7 +393,11 @@
   
       <article class="product-item">
         <div class="img-box">
-          <img class="product-img" src="./images/shopdesk/shop-item-desk2.jpg" alt="Кукла зайчик">
+          <picture>
+            <source srcset="./images/shoptablet/shop-item-tablet2.jpg" media="(max-width: 1199px)">
+            <source srcset="./images/shopmobile/shop-item-mobile2.jpg" media="(max-width: 640px)">
+            <img class="product-img" src="./images/shopdesk/shop-item-desk2.jpg" alt="Кукла зайчик">
+          </picture>
         </div>
         <div class="product-wrp">
           <div class="product-text">
@@ -412,7 +421,11 @@
   
       <article class="product-item">
         <div class="img-box">
-          <img class="product-img" src="./images/shopdesk/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+          <picture>
+            <source srcset="./images/shoptablet/shop-item-tablet3.jpg" media="(max-width: 1199px)">
+            <source srcset="./images/shopmobile/shop-item-mobile3.jpg" media="(max-width: 640px)">
+            <img class="product-img" src="./images/shopdesk/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+          </picture>
         </div>
         <div class="product-wrp">
           <div class="product-text">
@@ -436,7 +449,7 @@
     </div>
   
   </section>
-  
+
   <footer class="page-footer">
   
     <div class="footer-content">
@@ -471,6 +484,8 @@
   
   <div class="popup visually-hidden">
     <div class="fidback-section">
+      <div class="fidback-section-close">
+      </div>
       <h2 class="form-name">Ваш фидбек</h2>
       <form class="fidback-form">
         <label class="form-label-choise">
@@ -502,7 +517,7 @@
         <button class="popup-btn" type="submit">Отправить</button>
       </form>
     </div>
-  </div> 
+  </div>
 </body>
 
 </html>
